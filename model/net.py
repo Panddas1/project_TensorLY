@@ -84,7 +84,7 @@ class Net(nn.Module):
         return F.log_softmax(s, dim=1)
 
 
-class TAENet(nn.Module):
+class TCLNet(nn.Module):
     """
     This is the standard way to define your own network in PyTorch. You typically choose the components
     (e.g. LSTMs, linear layers etc.) of your network in the __init__ function. You then apply these layers
@@ -109,7 +109,7 @@ class TAENet(nn.Module):
         Args:
             params: (Params) contains num_channels
         """
-        super(TAENet, self).__init__()
+        super(TCLNet, self).__init__()
         self.num_channels = num_channels
 
         # each of the convolution layers below have the arguments (input_channels, output_channels, filter_size,
@@ -205,5 +205,5 @@ metrics = {
 
 if __name__ == '__main__':
     input=torch.randn([16,3,64,64])
-    model=TAENet()
+    model=TCLNet()
     output=model(input)

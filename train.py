@@ -187,7 +187,7 @@ if __name__ == '__main__':
 
     # Define the model and optimizer
     #model = net.Net(params).cuda() if params.cuda else net.Net(params)
-    model = net.TAENet().cuda() if params.cuda else net.TAENet()
+    model = net.TCLNet().cuda() if params.cuda else net.TCLNet()
     optimizer = optim.Adam(model.parameters(), lr=params.learning_rate)
 
     # fetch loss function and metrics
