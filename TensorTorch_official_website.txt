@@ -1,0 +1,3 @@
+https://tensorly.org/torch/dev/user_guide/trl.html
+https://tensorly.org/torch/dev/index.html
+http://tensorly.org/stable/user_guide/quickstart.html
